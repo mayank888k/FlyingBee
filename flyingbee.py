@@ -38,7 +38,7 @@ def welcomeDisplay():
                 SCREEN.blit(GAME_SPRITES["Base"],(basex,basey))
 
                 pygame.display.update()                 #to update images on screen
-
+                FPSCLOCk.tick(FPS)
 
 
 if __name__ == "__main__":
