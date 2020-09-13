@@ -14,6 +14,7 @@ BACKGROUND = 'data/sprites/background.png'
 PIPE = 'data/sprites/pipe.png'
 GROUNDY = int(SCREENHEIGHT*0.8)
 
+
 def iscollide(playerx, playery, upperPipes, lowerPipes):
     if playery > GROUNDY-25 or playery < 0:
         GAME_AUDIO['hit'].play()
@@ -105,7 +106,7 @@ def maingame():
         if crashtest:
             SCREEN.blit(GAME_SPRITES["Gameover"],(int((SCREENWIDTH - 1.2*GAME_SPRITES["Gameover"].get_width())),int((SCREENHEIGHT - 7.5*GAME_SPRITES["Gameover"].get_height()))))
             pygame.display.update()
-            #FPSCLOCk.tick(FPS)
+            FPSCLOCk.tick(FPS)
             return
 
         #to check score
