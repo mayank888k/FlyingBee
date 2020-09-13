@@ -103,6 +103,9 @@ def maingame():
         #to check crash with pipe or screen
         crashtest=iscollide(playerx, playery, upperPipes, lowerPipes)
         if crashtest:
+            SCREEN.blit(GAME_SPRITES["Gameover"],(int((SCREENWIDTH - 1.2*GAME_SPRITES["Gameover"].get_width())),int((SCREENHEIGHT - 7.5*GAME_SPRITES["Gameover"].get_height()))))
+            pygame.display.update()
+            #FPSCLOCk.tick(FPS)
             return
 
         #to check score
@@ -166,7 +169,7 @@ def maingame():
 
 def welcomeDisplay():
     
-    playerx = int(SCREENWIDTH/5)      #setting coordinate of images wrt screen
+    playerx = int(SCREENWIDTH/2.5)      #setting coordinate of images wrt screen
     playery = int((SCREENHEIGHT - GAME_SPRITES['Player'].get_height())/2)
     messagex = int((SCREENWIDTH - GAME_SPRITES['Message'].get_width())/2)
     messagey = int((SCREENHEIGHT*0.173 ))
@@ -225,6 +228,7 @@ if __name__ == "__main__":
     GAME_SPRITES["Background"] = pygame.image.load(BACKGROUND).convert_alpha()
     GAME_SPRITES["Player"] = pygame.image.load(PLAYER).convert_alpha()
     GAME_SPRITES["Base"] = pygame.image.load('data/sprites/base.png').convert_alpha()
+    GAME_SPRITES["Gameover"] = pygame.image.load('data/sprites/gameover.png').convert_alpha()
 
     GAME_AUDIO['die'] = pygame.mixer.Sound('data/audio/die.wav')
     GAME_AUDIO['hit'] = pygame.mixer.Sound('data/audio/hit.wav')
@@ -235,5 +239,5 @@ if __name__ == "__main__":
     while True:
         welcomeDisplay()
         maingame()
-        welcomeDisplay()
+        #welcomeDisplay()
 
