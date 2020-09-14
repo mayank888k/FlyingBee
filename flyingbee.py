@@ -51,6 +51,23 @@ def pipegenerator():
     ]
     return pipe
     
+def scoreDisplay():
+    SCREEN.blit(GAME_SPRITES["Gameover"],(int((SCREENWIDTH - 1.2*GAME_SPRITES["Gameover"].get_width())),int((SCREENHEIGHT - 7.5*GAME_SPRITES["Gameover"].get_height()))))
+    pygame.display.update()
+    FPSCLOCk.tick(FPS)
+    while True:
+
+        for event in pygame.event.get():                #to get events that are taking place like pressing any key
+            if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+            
+            elif (event.type == KEYDOWN and (event.key == K_SPACE or event.key == K_UP)):
+                return
+            elif (event.type == pygame.MOUSEBUTTONDOWN):
+                return
+
+    
 
 def maingame():
     score=0
@@ -104,9 +121,7 @@ def maingame():
         #to check crash with pipe or screen
         crashtest=iscollide(playerx, playery, upperPipes, lowerPipes)
         if crashtest:
-            SCREEN.blit(GAME_SPRITES["Gameover"],(int((SCREENWIDTH - 1.2*GAME_SPRITES["Gameover"].get_width())),int((SCREENHEIGHT - 7.5*GAME_SPRITES["Gameover"].get_height()))))
-            pygame.display.update()
-            FPSCLOCk.tick(FPS)
+            scoreDisplay()
             return
 
         #to check score
