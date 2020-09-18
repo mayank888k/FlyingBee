@@ -91,7 +91,7 @@ def maingame():
 
     pipeVelX=-4             #setting pipe velocity on x coordinate
 
-    playerVelY=-9           #steeing player velocity when in fall down
+    playerVelY=-9           #setting player velocity when it fall down
     playerMaxVelY=10        #player ki maximum velocity on Y
     playerMinVelY=8         #player ki min velocity on Y
 
