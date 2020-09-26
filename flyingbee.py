@@ -54,6 +54,7 @@ def pipegenerator():
 def scoreDisplay():
     SCREEN.blit(GAME_SPRITES["Gameover"],(int((SCREENWIDTH - 1.2*GAME_SPRITES["Gameover"].get_width())),int((SCREENHEIGHT - 7.5*GAME_SPRITES["Gameover"].get_height()))))
     pygame.display.update()
+    GAME_AUDIO['gameover'].play()
     FPSCLOCk.tick(FPS)
     while True:
 
@@ -251,6 +252,7 @@ if __name__ == "__main__":
     GAME_AUDIO['point'] = pygame.mixer.Sound('data/audio/point.wav')
     GAME_AUDIO['swoosh'] = pygame.mixer.Sound('data/audio/swoosh.wav')
     GAME_AUDIO['wing'] = pygame.mixer.Sound('data/audio/wing.wav')
+    GAME_AUDIO['gameover'] = pygame.mixer.Sound('data/audio/gameover.wav')
 
     while True:
         welcomeDisplay()
