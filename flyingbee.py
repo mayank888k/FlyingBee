@@ -9,9 +9,9 @@ SCREENHEIGHT = 511
 SCREEN=pygame.display.set_mode((SCREENWIDTH,SCREENHEIGHT))   #TO CREATE THE SCREEN IN PYGAME
 GAME_AUDIO = {}
 GAME_SPRITES = {}
-PLAYER =  'data/sprites/bird.png'
-BACKGROUND = 'data/sprites/background.png'
-PIPE = 'data/sprites/pipe.png'
+PLAYER =  ['data/sprites/bird.png','data/sprites/redbird.png','data/sprites/yellowbird.png']
+BACKGROUND = ['data/sprites/background.png','data/sprites/background1.png']
+PIPE = ['data/sprites/pipe.png','data/sprites/pipe1.png']
 GROUNDY = int(SCREENHEIGHT*0.8)
 
 
@@ -237,13 +237,13 @@ if __name__ == "__main__":
 
     GAME_SPRITES["PIPE"]=(
         
-        pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(),180),
-        pygame.image.load(PIPE).convert_alpha()
+        pygame.transform.rotate(pygame.image.load(PIPE[random.randint(0,len(PIPE))-1]).convert_alpha(),180),
+        pygame.image.load(PIPE[random.randint(0,len(PIPE))-1]).convert_alpha()
     )
     
     GAME_SPRITES["Message"] = pygame.image.load('data/sprites/message.png').convert_alpha()
-    GAME_SPRITES["Background"] = pygame.image.load(BACKGROUND).convert_alpha()
-    GAME_SPRITES["Player"] = pygame.image.load(PLAYER).convert_alpha()
+    GAME_SPRITES["Background"] = pygame.image.load(BACKGROUND[random.randint(0,len(BACKGROUND))-1]).convert_alpha()
+    GAME_SPRITES["Player"] = pygame.image.load(PLAYER[random.randint(0,len(PLAYER))-1]).convert_alpha()
     GAME_SPRITES["Base"] = pygame.image.load('data/sprites/base.png').convert_alpha()
     GAME_SPRITES["Gameover"] = pygame.image.load('data/sprites/gameover.png').convert_alpha()
 
