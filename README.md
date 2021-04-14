@@ -17,7 +17,14 @@ the Bee moving forward.
 
 ## Game Preview
 <div stlyle = "display : flex;">
-<img style = "padding : 2px 2px;" src="screenshot1.jpg" width="280" height="500">
-<img style = "padding : 2px 2px;" src="screenshot2.jpg" width="280" height="500">
-<img style = "padding : 2px 2px;" src="screenshot3.jpg" width="280" height="500">
+<img  src="screenshot1.jpg" width="280" height="500">
+<img  src="screenshot2.jpg" width="280" height="500">
+<img  src="screenshot3.jpg" width="280" height="500">
 </div>
+
+## Download and Install
+
+- Click on the following link to download tha game and install it on your pc to play it.
+
+
+  https://mayank987.Itch.Io/flying-bee
