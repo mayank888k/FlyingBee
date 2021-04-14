@@ -17,7 +17,7 @@ the Bee moving forward.
 
 ## Game Preview
 <div stlyle = "display : flex;">
-<img style = "padding : 2px 2px;" src="screenshot1.jpg" width="290" height="500">
-<img style = "padding : 2px 2px;" src="screenshot2.jpg" width="290" height="500">
-<img style = "padding : 2px 2px;" src="screenshot3.jpg" width="290" height="500">
+<img style = "padding : 2px 2px;" src="screenshot1.jpg" width="285" height="500">
+<img style = "padding : 2px 2px;" src="screenshot2.jpg" width="285" height="500">
+<img style = "padding : 2px 2px;" src="screenshot3.jpg" width="285" height="500">
 </div>
